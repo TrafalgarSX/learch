@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vhr?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 12345
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+  cache:
+    cache-names: menus_cache
+    redis:
+      time-to-live: 1800s
+    
+
+server:
+  port: 8081
+
+Mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.example.learch.pojo
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
+
