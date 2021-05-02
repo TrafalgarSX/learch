@@ -1,7 +1,7 @@
 /*
  * @Author: guo yawen
  * @Date: 2021-04-27 19:24:24
- * @LastEditTime: 2021-04-29 17:11:45
+ * @LastEditTime: 2021-05-02 01:29:48
  * @LastEditors: guo yawen
  * @Description: 
  * @FilePath: \learch\src\main\java\com\example\learch\LearchApplication.java
@@ -12,6 +12,7 @@ package com.example.learch;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
  ** @SpringBootApplication   相当于＠EnableAutoConfiguration 和@ComponentScan
@@ -19,6 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  ** ＠EnableAutoConfiguration 注解表示开启自动化配置。 比如自动配置spring 和 springMVC
  */
 @SpringBootApplication
+@EnableCaching
 @MapperScan("com.example.learch.dao")
 public class LearchApplication {
 
