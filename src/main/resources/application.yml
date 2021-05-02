@@ -12,10 +12,9 @@ spring:
     password: 123456
     jedis:
       pool:
-        max-active: 8
-        max-idle: 8
-        max-wait: -1ms
-        min-idle: 0
+        max-active: 20
+        max-idle: 20
+        min-idle: 10
   cache:
     cache-names: menus_cache
     redis:
